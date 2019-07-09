@@ -1,0 +1,44 @@
+{
+  "scats" : {
+    "scat1": {
+      "location": "NSS",
+      "weight": "12g",
+      "color": "Brown",
+      "sampleName": "Poop Numero Uno",
+      "animal": "Zoe",
+      "uid": "LODTl67aH1a6uaAwjvX1wNkI7Zs2"
+    },
+    "scat2": {
+      "location": "Front Yard",
+      "weight": "20g",
+      "color": "Black",
+      "sampleName": "Doggie Doo Doo",
+      "animal": "Dog",
+      "uid": "LODTl67aH1a6uaAwjvX1wNkI7Zs2"
+    },
+    "scat3": {
+      "location": "Street",
+      "weight": "12g",
+      "color": "Brown",
+      "sampleName": "Street Scat",
+      "animal": "Unknown",
+      "uid": "LODTl67aH1a6uaAwjvX1wNkI7Zs2"
+    },
+    "scat4": {
+      "location": "Downtown",
+      "weight": "15g",
+      "color": "Green",
+      "sampleName": "It Was Everywhere",
+      "animal": "Tourist",
+      "uid": "PoopShooter123"
+    },
+    "scat5": {
+      "location": "Under Shoe",
+      "weight": "3g",
+      "color": "Dark Brown",
+      "sampleName": "Stepped in it",
+      "animal": "Bear",
+      "uid": "PoopShooter42069"
+    }
+  }
+}
