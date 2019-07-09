@@ -19,6 +19,8 @@ const getScat = userId => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
+const getSingleScat = scatId => axios.get(`${firebaseUrl}/scats/${scatId}.json`);
+
 const deleteScatFromTheDatabase = scatId => axios.delete(`${firebaseUrl}/scats/${scatId}.json`);
 
-export default { getScat, deleteScatFromTheDatabase };
+export default { getScat, deleteScatFromTheDatabase, getSingleScat };
