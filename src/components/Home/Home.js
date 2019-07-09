@@ -17,17 +17,27 @@ class Home extends React.Component {
     this.props.history.push(`/edit/${orderId}`);
   }
 
-  componentDidMount() {
+  getScats = () => {
     const userId = firebase.auth().currentUser.uid;
     scatData.getScat(userId)
       .then(scats => this.setState({ scats }))
       .catch(err => console.error('cant get scat', err));
   }
 
+  componentDidMount() {
+    this.getScats();
+  }
+
+  deleteScat = (scatId) => {
+    scatData.deleteScatFromTheDatabase(scatId)
+      .then(() => this.getScats())
+      .catch(err => console.error('can not delete shit', err));
+  }
+
   render() {
     const singleLink = '/scat/12345';
     const makeScatCards = this.state.scats.map(scat => (
-      <ScatCard key={ scat.id } scat={ scat } />
+      <ScatCard key={ scat.id } scat={ scat } deleteScat={ this.deleteScat }/>
     ));
 
     return (
