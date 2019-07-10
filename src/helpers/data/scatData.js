@@ -23,4 +23,11 @@ const getSingleScat = scatId => axios.get(`${firebaseUrl}/scats/${scatId}.json`)
 
 const deleteScatFromTheDatabase = scatId => axios.delete(`${firebaseUrl}/scats/${scatId}.json`);
 
-export default { getScat, deleteScatFromTheDatabase, getSingleScat };
+const postScat = scatObj => axios.post(`${firebaseUrl}/scats.json`, scatObj);
+
+export default {
+  getScat,
+  deleteScatFromTheDatabase,
+  getSingleScat,
+  postScat,
+};

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -35,7 +34,6 @@ class Home extends React.Component {
   }
 
   render() {
-    const singleLink = '/scat/12345';
     const makeScatCards = this.state.scats.map(scat => (
       <ScatCard key={ scat.id } scat={ scat } deleteScat={ this.deleteScat }/>
     ));
@@ -46,8 +44,6 @@ class Home extends React.Component {
         <div className="d-flex">
             { makeScatCards }
         </div>
-        <button className="btn btn-success" onClick={this.editEvent}>Edit a thing</button>
-        <Link to={singleLink}>View Single</Link>
       </div>
     );
   }
