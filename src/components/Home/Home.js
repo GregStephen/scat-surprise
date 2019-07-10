@@ -39,9 +39,9 @@ class Home extends React.Component {
     ));
 
     return (
-      <div className="Home col">
+      <div className="Home col container">
         <h1>SURPRISE IT'S SCAT LOL</h1>
-        <div className="d-flex">
+        <div className="row">
             { makeScatCards }
         </div>
       </div>
